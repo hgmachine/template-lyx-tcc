@@ -2678,7 +2678,7 @@ status open
 
 
 \backslash
-thispagestyle{solo}
+thispagestyle{empty}
 \end_layout
 
 \end_inset
