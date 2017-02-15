@@ -1,0 +1,2690 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%\usepackage{hyperref}
+%
+\usepackage{datetime2}
+\usepackage{python}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{mathptmx}
+\usepackage{amssymb}
+\usepackage{fdsymbol}
+\usepackage{tikz}
+\usepackage{listings,lstautogobble}
+\usepackage{empheq}
+\usepackage{longtable}
+\usepackage{steinmetz,environ}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{amsmath,indentfirst}
+\usepackage{caption}
+
+
+\usepackage[titles]{tocloft}
+\renewcommand{\cftchapfont}{\normalfont\sc}
+\usepackage[titletoc]{appendix}
+\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+
+
+
+\definecolor{celeste1}{RGB}{0,154,205}
+\definecolor{verde5}{RGB}{0,150,0}
+\definecolor{verde1}{RGB}{0,200,0}
+\definecolor{firebrick}{RGB}{178,34,34}
+\definecolor{crimson}{RGB}{220,20,60}
+\definecolor{reda}{RGB}{220,20,70}
+
+\definecolor{sea}{RGB}{25,154,90}
+\definecolor{sea2}{RGB}{17,106,106}
+\definecolor{sea3}{RGB}{47,150,100}
+\definecolor{sea4}{RGB}{76,153,0}
+
+\definecolor{rosadito}{RGB}{255,192,203}
+\definecolor{orange3}{RGB}{205,102,0}
+\definecolor{royalblue}{RGB}{0,35,102}
+\definecolor{azvi}{RGB}{148,0,211}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{multirow} 
+\setlength{\columnsep}{0.5cm}
+
+
+%%%%%%%%%%%%% CORES
+\definecolor{titulo}{RGB}{60,76,148}
+\definecolor{section}{RGB}{148,0,211}
+\definecolor{refFig}{RGB}{140,140,140}
+
+%%%%%%%%%%%%%
+
+
+% tabela longa que quebra entre p\'aginas
+\usepackage{longtable}
+%identando
+%\usepackage{indentfirst}
+%imagen en negritas
+%\usepackage[labelfont={it,rm}, tableposition=top]{caption}
+%\usepackage[labelfont={it,rm}]{caption}
+%%%%%%%%%%%%%%%%
+%%%PACKEGE CAPTION
+%%%%%%%%%%%%%%%%
+
+\DeclareCaptionFont{colorFigure}{\color{refFig}}
+\DeclareCaptionFont{colorTable}{\color{refFig}}
+\captionsetup[figure]{labelfont={bf,footnotesize,colorFigure},textfont={footnotesize},format=hang}%%
+%labelsep=period}
+\captionsetup[table]{labelfont={bf,footnotesize,colorTable}, format=hang,textfont={footnotesize}}
+\captionsetup[lstlisting]{labelfont={bf,footnotesize,colorTable}, format=hang,textfont={footnotesize}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%Package SECTSTY
+%Para centrar el capitulo
+\usepackage{sectsty}
+\chapterfont{\fontsize{15}{15}\selectfont\color{refFig}}
+%cambiar tamanho das fontes
+\sectionfont{\fontsize{14}{14}\selectfont\color{refFig}}
+\subsectionfont{\fontsize{13}{13}\selectfont\color{black}}
+\subsubsectionfont{\fontsize{12}{12}\selectfont\color{black}\em}
+\usepackage{url}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage[thinlines]{easytable}
+\setlength{\extrarowheight}{2pt}
+\renewcommand*\arraystretch{1}
+
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\usepackage{titlesec}
+\usepackage{varioref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+
+\titlespacing*\section{0pt}{4ex plus 1ex minus .2ex}{-2.5ex plus .2ex}
+\titlespacing*\subsection{0pt}{4ex plus 1ex minus .2ex}{-4ex plus .2ex}
+\titlespacing*\subsubsection{0pt}{4ex plus 1ex minus .2ex}{-4ex plus .2ex}
+
+%\makeatletter
+%\renewcommand\thefigure{\mbox{\thechapter-\arabic{figure}}}
+%\makeatother
+%\crefformat{figure}{#2\color{Cyan!40!blue}{{[Fig.~#1#3]}}}
+%\crefformat{equation}{#2\color{Cyan!40!blue}{{[Eq.~#1#3]}}}
+%\crefformat{table}{#2\color{Cyan!40!blue}{{[Tab.~#1#3]}}}
+
+\crefname{lstlisting}{listing}{listings}
+\Crefname{lstlisting}{Listing}{Listings}
+\crefname{subsection}{subsection}{subsections}
+\crefname{appendix}{appendix}{appendixes}
+\crefformat{figure}{\textcolor{refFig}{[#2fig.~#1#3]}}
+\crefformat{equation}{\textcolor{refFig}{[#2eq.~#1#3]}}
+\crefformat{table}{\textcolor{refFig}{[#2tab.~#1#3]}}
+\crefformat{appendix}{\textcolor{refFig}{[#2ap.~#1#3]}}
+\crefformat{subsection}{\textcolor{refFig}{#2subsecção~#1#3}}
+\crefformat{listing}{\textcolor{refFig}{[#2lst.~#1#3]}}
+\crefformat{Listing}{\textcolor{refFig}{[#2lst.~#1#3]}}
+
+
+%\crefname{figure}{\em{[Fig.~(\thefigure)]}}{figures}
+%\Crefname{figure}{Figure}{Figures}
+
+%nmumero de linas na tabela
+\newcounter{trow}
+\newcommand{\firstrow}{\setcounter{trow}{1}\arabic{trow}}
+\newcommand{\nextrow}{\addtocounter{trow}{1}\arabic{trow}}
+
+\usepackage{pgfornament}%ORNAMENT
+\usepackage{pstricks}
+
+
+\setlength{\parindent}{1.85cm}
+\setlength{\parskip}{1.5pt}
+%\renewcommand{\baselinestretch}{1}
+\usepackage{textcomp}
+
+%cor pagina
+%\usepackage{pagecolor}\usepackage{afterpage}
+
+\usepackage{tcolorbox}
+\usepackage{calc}
+\usepackage{colortbl}
+\usetikzlibrary{arrows.meta}
+\tcbuselibrary{skins,theorems,breakable,fitting}
+\newtcolorbox{resposta}[2][]{
+empty,
+coltitle=red!75!black,fonttitle=\bfseries,
+borderline horizontal={0.5mm}{0pt}{red!50!white},
+breakable }
+%colbacktitle=gray!30,
+%colback=white,
+%coltitle=black,
+%colframe=gray!90,
+%title=Resposta,
+%fonttitle=\em,
+%borderline vertical={2pt}{0pt}{red},
+%before upper={\parindent2em\parskip0.8em},breakable}
+
+\newtcolorbox[auto counter,number format=\Alph]{perg}[2][]{%
+colbacktitle=crimson!80,
+coltitle=white,
+colframe=azvi,
+colback=azvi!10!white,
+fonttitle=\bfseries,
+title=Questão~ \thetcbcounter #2,#1,
+breakable%center title
+}
+\usepackage{pdfpages}
+
+
+
+%########### LISTINGS ################
+
+\definecolor{mygreen}{rgb}{0,0.55,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\newcommand{\SimCod}[1]{\textcolor{blue}{#1}\ttfamily\bfseries}
+\newcommand{\ColorNum}[1]{\textcolor{firebrick}{#1}\ttfamily\bfseries}
+
+
+\lstset{
+ % backgroundcolor=\color{azvi!4},  
+  basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=top,                    % sets the caption-position to bottom
+  commentstyle=\color{firebrick!80},    % comment style
+  deletekeywords={},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue}\ttfamily\bfseries,   % keyword style
+  language=Matlab,                 % the language of the code
+  otherkeywords={&&,...,classdef,properties,scatter3,feedforwardnet},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  %numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\ttfamily\color{sea4}\scriptsize, % the style that is used for the line-numbers
+  rulecolor=\color{sea4},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=4,	                   % sets default tabsize to 2 spaces
+  title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+  literate=*%{\{}{{\SimCod{\{}}}1
+               %{(}{{\SimCod{(}}}1
+               %{;}{{\SimCod{;}}}1
+               %{,}{{\SimCod{,}}}1            
+               {>}{{\SimCod{$>$}}}1
+               {<}{{\SimCod{$<$}}}1
+               {=}{{\SimCod{$=$}}}1
+               %{.}{{\SimCod{$\centerdot$}}}1
+               %{0}{{{\ColorNum{0}}}}1
+               %{.0}{{{\ColorNum{.0}}}}1
+               %{1}{{{\ColorNum{1}}}}1
+               %{2}{{{\ColorNum{2}}}}1
+               %{3}{{{\ColorNum{3}}}}1
+               %{4}{{{\ColorNum{4}}}}1
+               %{5}{{{\ColorNum{5}}}}1
+               %{6}{{{\ColorNum{6}}}}1
+               %{7}{{{\ColorNum{7}}}}1
+               %{8}{{{\ColorNum{8}}}}1
+               %{9}{{{\ColorNum{9}}}}1
+             % {)}{{\SimCod{)}}}1
+,
+%xleftmargin=5pt,
+%framexleftmargin=5pt,
+%autogobble=true
+linewidth=\textwidth,
+%xleftmargin=0.28\textwidth,
+%xrightmargin=0.28\textwidth,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%                    CHAPTER                                         %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[Conny]{fncychap}
+%\ChNameUpperCase
+%\ChNameVar{\fontsize{13}{14}\selectfont}
+%\ChNumVar{\fontsize{50}{55}\selectfont}
+%\ChTitleVar{\huge\bfseries\sf}
+%\ChRuleWidth{1.5pt}
+
+\ChNameUpperCase
+\ChTitleUpperCase
+\ChNameVar{\centering\normalsize\rm\bfseries}
+\ChNumVar{\normalsize}
+\ChRuleWidth{1pt}
+\ChTitleVar{\centering\large\rm\bf}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%
+ \newcommand\boxedSection[3]{{%
+%
+     \begin{tikzpicture}[inner sep=#3,line width=.4mm, color=refFig!65!black]
+         \node[anchor=east,rectangle,draw] at (0,0) (counter) {\color{refFig!70!black}\textbf{#2}};
+             \draw (counter.south west)  ++(0.0pt,0.5pt)-- ++($(\linewidth,0) - (2.5pt,0)$);
+\node [right of=counter,anchor=west]{\textbf{#1}};
+     \end{tikzpicture}
+ }}
+ \newcommand\boxedSectionB[3]{{%
+%
+     \begin{tikzpicture}[inner sep=#3,line width=1.5pt]
+          %\draw (0,0.4)-- (\linewidth-1.2cm,0.41);
+          \node[anchor=east,rectangle,draw,fill=black] at (0,0) (counter) {\color{white}\textbf{#2}};
+               \draw (counter.south west)  ++(0.0pt,0.5pt)-- ++($(\linewidth,0) - (2.5pt,0)$);
+          \node [right of=counter,anchor=west]{\textsc {#1} };
+     \end{tikzpicture}
+ }}
+ \newcommand\boxedSectionC[3]{{%
+%
+     \begin{tikzpicture}[inner sep=#3,line width=1pt, color=refFig]
+         \node[anchor=east,rectangle,draw,fill=refFig] at (0,0) (counter) {\color{white}\textbf{#2}};
+             \draw (counter.south west)  ++(0.0pt,0.5pt)-- ++($(\linewidth,0) - (2.5pt,0)$);
+\node [right of=counter,anchor=west]{\textbf{#1}};
+     \end{tikzpicture}
+ }}
+\newcommand\boxedsection[1]{\boxedSectionB{#1}{\thesection}{1.5mm}}
+\newcommand\boxedsubsection[1]{\boxedSection{#1}{\thesubsection}{1.5mm}}
+\newcommand\boxedsubsubsection[1]{\boxedSectionC{#1}{\thesubsubsection}{1.5mm}}
+
+ \titleformat{\section}[hang]%
+     {\bfseries}%
+     {}%
+     {0em}%
+     {\filright\boxedsection}%
+
+ \titleformat{\subsection}[hang]%
+     {}%
+     {}%
+     {.0em}%
+     {\filright\boxedsubsection}%
+
+ \titleformat{\subsubsection}[hang]%
+     {}%
+     {}%
+     {.0em}%
+     {\filright\boxedsubsubsection}%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% FANCY
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\tocloftpagestyle{fancy}
+
+\fancypagestyle{demais}{
+    \fancyhead{} % clear all header fields
+    \fancyhead[R]{\footnotesize {\hspace{1.5cm}\textsc{\textbf \thepage}}}
+    \fancyhead[L]{\slshape  {\textsc{\leftmark}}}
+    \fancyfoot{} % clear all footer fields
+    \renewcommand{\headrulewidth}{0.5pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\renewcommand{\chaptermark}[1]{
+\markboth{\footnotesize  \textsc{
+{\color{refFig} \textbf{\chaptername ~\thechapter}}} {\color{refFig}{$\,\,\,\medblacksquare\,\,$} }\ #1}{}}
+
+\fancypagestyle{solo}{
+    \fancyhf{}
+   \fancyfoot{}
+   \fancyhead{} 
+    \fancyhead[RO]{}
+    \fancyhead[LO]{}
+    \cfoot{}
+    \fancyfoot[C]{\footnotesize{\textbf \thepage}}
+    \renewcommand{\headrulewidth}{0pt}
+}
+\tocloftpagestyle{empty}
+
+
+
+
+
+
+
+%% NOMENCLATURA
+\usepackage{nomencl}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+
+\usepackage[alf, abnt-verbatim-entry=no]{abntex2cite}
+\urlstyle{tt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "lmtt" "default"
+\font_math "iwona-math" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 95 100
+\font_tt_scale 95 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing other 1.5
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 1.7cm
+\bottommargin 1.7cm
+\headheight 3cm
+\headsep 0.6cm
+\footskip 0cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation 0.75cm
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\bullet 0 0 17 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocontents{toc}{
+\backslash
+protect
+\backslash
+thispagestyle{solo}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocontents{lof}{
+\backslash
+protect
+\backslash
+thispagestyle{solo}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocontents{lot}{
+\backslash
+protect
+\backslash
+thispagestyle{solo}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Funções
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+eng}[1]{
+\end_layout
+
+\begin_layout Plain Layout
+
+				{
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+rm{
+\backslash
+em{
+\backslash
+hspace{-5pt}#1
+\backslash
+hspace{-5pt}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+				}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+fonteProp}[1]{
+\end_layout
+
+\begin_layout Plain Layout
+
+				{
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+hspace{2cm}
+\backslash
+vspace{#1}
+\backslash
+scriptsize{
+\backslash
+em{Fonte: Autoria própria.}}
+\end_layout
+
+\begin_layout Plain Layout
+
+				}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+fonte}[2]{
+\end_layout
+
+\begin_layout Plain Layout
+
+				{
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+hspace{1.9cm}
+\backslash
+vspace{#2}
+\backslash
+scriptsize{
+\backslash
+em{Fonte:~Adaptado~de~#1.
+\backslash
+vspace{-0.5cm}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+				}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+linIm}[2]{
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+vspace{#1pt}
+\backslash
+textcolor{refFig}{
+\backslash
+rule{0.77
+\backslash
+textwidth}{.1mm}}
+\backslash
+vspace{#2pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionsetup{width=0.77
+\backslash
+textwidth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+Nome do TCC e do autor
+\end_layout
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+DTMsavenow{hoje}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+salvando a data de hoje
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+ntcc{
+\end_layout
+
+\end_inset
+
+Nome Desse TCC Delícia
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+nautor{
+\end_layout
+
+\end_inset
+
+Teu nome Gatinho
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+matlab{
+\backslash
+textbf{Matlab}
+\backslash
+textsuperscript{
+\backslash
+footnotesize{
+\backslash
+copyright}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+nnt{
+\backslash
+textbf{Neural Network Toolbox}
+\backslash
+textsuperscript{
+\backslash
+footnotesize{
+\backslash
+texttrademark}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+tcc{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+textbf{
+\end_layout
+
+\begin_layout Plain Layout
+
+  		
+\backslash
+textcolor{black}{
+\end_layout
+
+\begin_layout Plain Layout
+
+			{
+\backslash
+Large{}
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+ntcc
+\end_layout
+
+\begin_layout Plain Layout
+
+		  }}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+Começo do documento
+\end_layout
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/LOGO_PNG.png
+	lyxscale 20
+	scale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-1.1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\backslash
+textrm{
+\backslash
+color{black}{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+vspace{-0.08cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+textsc {
+\backslash
+normalsize{}Universidade Federal Do Ceará}}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+vspace{-0.3cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+em {Campus de Sobral}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\size large
+Curso de Engenharia de Computação
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 2.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+large{
+\backslash
+nautor}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+textsc 
+\backslash
+tcc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Sobral $-$ CE
+\backslash
+
+\backslash
+ 
+\backslash
+the
+\backslash
+year
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+À vida do meu amor, ao amor da minha vida, Diane.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Contra-capa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+ { {
+\backslash
+normalsize{} 
+\backslash
+nautor } }
+\end_layout
+
+\begin_layout Plain Layout
+
+%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+ {
+\backslash
+textsc { 
+\backslash
+textbf {
+\backslash
+large{} 
+\backslash
+ntcc } }}
+\end_layout
+
+\begin_layout Plain Layout
+
+%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+small{}
+\end_layout
+
+\end_inset
+
+Trabalho de Conclusão de Curso apresentado como requisito parcial para obtenção
+ do grau de Engenheiro de Computação na Universidade Federal do Ceará, 
+\emph on
+Campus
+\emph default
+ Sobral.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Orientador
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prof.
+ Me.
+ Zicrano
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Coorientador
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prof.
+ Dr.
+ Fulano
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mudar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+number
+\backslash
+month
+\begin_inset Quotes erd
+\end_inset
+
+ para o mês que desejar entregar o tcc, mas acho que vai renderizar o TCC
+ no mesmo mês que entregar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Sobral $-$ CE 
+\backslash
+
+\backslash
+ 
+\backslash
+DTMportugesmonthname{
+\backslash
+number
+\backslash
+month} de 
+\backslash
+number
+\backslash
+year
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+textit {
+\backslash
+small{}
+\end_layout
+
+\end_inset
+
+Dedico a todos os gostosos da UFC.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Ao Pai De Família, por essa delicia de filme.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Agradecimentos
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{solo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{solo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{solo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{solo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+nomname}{Lista de abreviaturas e siglas}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "custom"
+width "2cm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ajeitar o sumario
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+titlecontents{chapter}% <section-type>
+\end_layout
+
+\begin_layout Plain Layout
+
+	[0pt]% <left>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+vspace{0.8cm}}% <above-code>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+sc 
+\backslash
+textsc {
+\backslash
+textbf {
+\backslash
+chaptername
+\backslash
+ 
+\backslash
+thecontentslabel}} 
+\backslash
+quad}% <numbered-entry-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{}% <numberless-entry-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+bfseries
+\backslash
+hfill
+\backslash
+contentspage
+\backslash
+vspace{-0.1em}
+\backslash
+hrule
+\backslash
+vspace{0.5em}}% <filler-page-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+titlecontents{section}% <section-type>
+\end_layout
+
+\begin_layout Plain Layout
+
+	[0pt]% <left>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+vspace{3pt}}% <above-code>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+bf 
+\backslash
+thecontentslabel 
+\backslash
+quad}% <numbered-entry-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{}% <numberless-entry-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+bf ~
+\backslash
+hfill
+\backslash
+contentspage}% <filler-page-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+titlecontents{subsection}% <section-type>
+\end_layout
+
+\begin_layout Plain Layout
+
+	[2.3em]% <left>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{}% <above-code>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+thecontentslabel 
+\backslash
+quad}% <numbered-entry-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+hspace*{-2.3em}}% <numberless-entry-format>
+\end_layout
+
+\begin_layout Plain Layout
+
+	{~
+\backslash
+titlerule*[0.5pc]{.}
+\backslash
+contentspage}% <filler-page-format>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{solo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%EQUACOES
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+NewEnviron{EqEst}{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{empheq}[box={
+\backslash
+fboxsep=8pt
+\backslash
+colorbox{gray!12}}]{align}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+BODY
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{empheq}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+%matlab symbol
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+newcommand*
+\backslash
+matlab{$
+\backslash
+mathsf{
+\backslash
+mathbf{Matlab^{
+\backslash
+copyright}}}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Multisim symbol
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+bp{
+\backslash
+textit{Back-propagation}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+arq}[1]{
+\backslash
+fcolorbox{gray!80}{gray!15}{
+\backslash
+texttt{#1}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+lstlistingname}{Listagem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{demais}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+setcounter{page}{9}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+{{ begin-chapters }}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+CAPITULO 1: INTRODUÇÃO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+{{ end-chapters }}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{appendices}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+section{Consectetur adipiscing elit}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+includepdf[pages={1},pagecommand={
+\backslash
+section{Folha de dados do  NE555}
+\backslash
+label[appendix]{anexo_a}},scale=0.95]{NE555.pdf}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+includepdf[pages={2-10},scale=1]{NE555.pdf}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+section{Mauris euismod}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionsetup{width=15cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Lista do algoritmo de criação, teste e treinamento}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[xleftmargin=0.1
+\backslash
+textwidth, xrightmargin=0.1
+\backslash
+textwidth, caption={Código para a aproximação da função $
+\backslash
+phi$.
+ 
+\backslash
+arq{ajuste
+\backslash
+_funcao.m}}, label={lst:ajuste_func}]{MLP_ff_newff/ajuste_funcao.m}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Gráficos dos resultados obtidos na simulação}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+linIm{0}{-8}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+consequat nisi.
+ Vivamus vel ante dictum, dapibus erat id, pellentesque massa.
+ Nam sagittis iaculis lorem, non pharetra purus cursus et.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+linIm{-10}{10}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/LOGO_PNG.png
+	lyxscale 20
+	scale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+linIm{-5}{-5}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fonte{
+\end_layout
+
+\end_inset
+
+(JUAN, 2015)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{-0.2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{solo}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+textsc{Referências Bibliográficas}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "biblio"
+options "bibtotoc,abntex2-alf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{solo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
